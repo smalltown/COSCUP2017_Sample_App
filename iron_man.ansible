@@ -1,0 +1,9 @@
+---
+- name: provision #{container_teamplate}
+  hosts: all
+  remote_user: root
+  become: yes
+  become_user: root
+  become_method: su
+  roles:
+    - { role: ansible, character: iron_man }
